@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'drf_spectacular',
     'user',
-    'incident',
+    'course',
 ]
 
 MIDDLEWARE = [
@@ -81,12 +81,12 @@ WSGI_APPLICATION = 'app.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'HOST' : 'localhost',
-        'NAME' : 'incidentdb',
-        'USER' : 'shriyansh',
-        'PASSWORD' : 'incidentdbpass',
-        'PORT' : '',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'mydb',
+        'USER': 'root',
+        'PASSWORD': 'admin',
+        'HOST':'localhost',
+        'PORT':'3306',
     }
 }
     
