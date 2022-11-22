@@ -1,5 +1,5 @@
 """
-URL mappings for the course app.
+URL mappings for the incident app.
 """
 from django.urls import (
     path,
@@ -8,13 +8,13 @@ from django.urls import (
 
 from rest_framework.routers import DefaultRouter
 
-from course import views
+from incident import views
 
 
 router = DefaultRouter()
-router.register('courses', views.CourseViewSet)
+router.register('incidents', views.IncidentViewSet)
 
-app_name = 'course'
+app_name = 'incident'
 
 urlpatterns = [
     path('', include(router.urls)),

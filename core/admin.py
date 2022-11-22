@@ -43,4 +43,4 @@ class UserAdmin(BaseuserAdmin):
     )
 
 admin.site.register(models.User, UserAdmin)
-admin.site.register(models.Course)
+admin.site.register(models.Incident)

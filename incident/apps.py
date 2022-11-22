@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class CourseConfig(AppConfig):
+class IncidentConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'course'
+    name = 'incident'

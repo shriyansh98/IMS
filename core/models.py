@@ -17,7 +17,7 @@ class UserManager(BaseUserManager):
         """create save and return a new user""" 
 
         if not email:
-            raise ValueError('user must haev an emil address')
+            raise ValueError('user must have an email address')
         user = self.model( email = self.normalize_email(email), **extra_field)
         user.set_password(password)
         user.save(using=self._db)
@@ -45,8 +45,8 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     USERNAME_FIELD = 'email'
 
-class Course(models.Model):
-    """course object"""
+class Incident(models.Model):
+    """incident object"""
 
     user = models.ForeignKey(
         settings.AUTH_USER_MODEL,

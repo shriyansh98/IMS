@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'drf_spectacular',
     'user',
-    'course',
+    'incident',
 ]
 
 MIDDLEWARE = [
@@ -83,9 +83,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'HOST' : 'localhost',
-        'NAME' : 'coursedb',
+        'NAME' : 'incidentdb',
         'USER' : 'shriyansh',
-        'PASSWORD' : 'coursedbpass',
+        'PASSWORD' : 'incidentdbpass',
         'PORT' : '',
     }
 }

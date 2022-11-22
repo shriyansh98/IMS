@@ -60,21 +60,21 @@ class ModelTests(TestCase):
         self.assertTrue(user.is_staff)
 
 
-    def test_create_course(self):
-        """test creating a course is successful"""
+    def test_create_incident(self):
+        """test creating a incident is successful"""
         user = get_user_model().objects.create_user(
             'test@ex.com',
             'testpass123',
         )    
 
-        course = models.Course.objects.create(
+        incident = models.Incident.objects.create(
             user= user,
-            title= 'sample course name',
+            title= 'sample incident name',
             time_completion_hr = 5,
             price = Decimal('350.50'),
-            description = 'Sample description of the course',
+            description = 'Sample description of the incident',
 
         )
 
-        self.assertEqual(str(course), course.title)
+        self.assertEqual(str(incident), incident.title)
         
