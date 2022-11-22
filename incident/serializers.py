@@ -11,8 +11,8 @@ class IncidentSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Incident
-        fields = ['id', 'title', 'time_completion_hr', 'price', 'link']
-        read_only_fields = ['id']
+        fields = ['Report_name', 'priority', 'date_time', 'status']
+        read_only_fields = ['Report_name']
 
 class IncidentDetailsSerializer(IncidentSerializer):
     """serializer for incident detail view """
